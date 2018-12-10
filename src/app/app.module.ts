@@ -4,15 +4,26 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
+//Componentes propios
+import { CardComponent } from './components/card/card.component';
+import { ComparadorComponent } from './components/comparador/comparador.component';
+
+// providers o servicios
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardComponent,
+    ComparadorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
