@@ -1,5 +1,21 @@
-<div class="row">
-  <div class="col-5"><app-card ></app-card></div>
-  <div class="col-5"><app-card ></app-card></div>        
-  
-</div> 
+<div class="container">
+
+  <div class="row">
+    <div class="col-2 bg-light">
+      <ul class="list-group">
+        <li *ngFor="let f of frutas" (click)="seleccionar(f)" class="list-group-item" [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
+      </ul>
+    </div>
+    <div class="col-8">
+      <div class="row">
+        <div class="col-5">
+          <app-card [_fruta]="f1" [_fruta2]="f2"></app-card>
+        </div>
+        <div class="col-5">
+          <app-card [_fruta]="f2" [_fruta2]="f1"></app-card>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>

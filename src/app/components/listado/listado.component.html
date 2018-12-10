@@ -1,0 +1,33 @@
+<div class="row justify-content-between mb-4 mt-2">
+    <h2>Listado de Frutas</h2>
+    <a [routerLink]="['../detalle', -1]" class="btn btn-success">Crear nueva</a>
+  </div>
+  <p class="text-success">{{mensaje}}</p>
+  
+  <table id="tabla" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Calorías</th>
+            <th>Colores</th>
+            <th>Oferta</th>
+            <th>Descuento</th>
+            <th>Imagen</th>
+            <th><span class="fas fa-trash-alt float-right"></span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of frutas">
+            <td><a [routerLink]="['../detalle', f.id]">{{f.nombre}}</a></td>
+            <td>{{(f.precio - (f.descuento * f.precio) / 100) | number: '1.2-2'}}</td>
+            <td>{{f.calorias}}</td>
+            <td>{{f.colores|json}}</td>
+            <td>{{(f.oferta? 'Sí' : 'No')}}</td>
+            <td>{{f.descuento}}</td>
+            <td><img src="{{f.foto}}" alt="Imagen_fruta" class="imgFruta"/></td>
+            <td><span class="fas fa-trash-alt float-right" (click)="eliminar(f.id)"></span></td>
+        </tr>
+    </tbody>
+  </table>
+

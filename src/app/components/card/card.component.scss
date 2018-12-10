@@ -1,0 +1,38 @@
+.card-head {
+    position: relative;
+
+    .descuento{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ad0415;
+      border-radius: 50%;
+      color: white;
+      font-size: 1em;
+      padding: 10px 5px;
+    }
+    .calorias {
+      position: absolute;
+      top: 150px;
+      right: 10px;
+      border-radius: 0%;
+      background-color: #A4A808;
+      color: #f9faf9;
+      font-size: 1em;
+      padding: 0px 0px;
+  }
+    img{
+      height: 180px;
+  }
+  
+  
+  }
+  .positivo{
+    color: green;
+    font-weight: 600;
+  }
+  
+  .negativo{
+    color: red;
+    font-weight: 600;
+  }

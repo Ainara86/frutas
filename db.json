@@ -1,0 +1,147 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "frutas": [
+    {
+      "nombre": "kiwi1",
+      "precio": 2.5,
+      "calorias": "50",
+      "oferta": false,
+      "descuento": 0,
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kiwi_%28Actinidia_chinensis%29_2_Luc_Viatour.jpg/220px-Kiwi_%28Actinidia_chinensis%29_2_Luc_Viatour.jpg",
+      "colores": [
+        {
+          "nombre": [
+            {
+              "color": "verde"
+            }
+          ]
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nombre": "Fresa",
+      "precio": 6,
+      "calorias": 100,
+      "oferta": true,
+      "descuento": 20,
+      "foto": "https://media.mercola.com/assets/images/foodfacts/strawberry-nutrition-facts.jpg",
+      "cantidad": 0,
+      "colores": [
+        {
+          "nombre": "verde"
+        },
+        {
+          "nombre": "rojo"
+        },
+        {
+          "nombre": "blanco"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "nombre": "Manzana",
+      "precio": 2.5,
+      "calorias": 100,
+      "colores": [
+        "",
+        [
+          {
+            "color": "verde"
+          }
+        ]
+      ],
+      "oferta": true,
+      "foto": "https://biotrendies.com/wp-content/uploads/2015/06/manzana.jpg",
+      "descuento": 5,
+      "cantidad": 0,
+      "id": 4
+    },
+    {
+      "id": 5,
+      "nombre": "Sandia",
+      "precio": 2.5,
+      "calorias": "50",
+      "oferta": false,
+      "descuento": 0,
+      "foto": "https://sandiapedia.com/wp-content/uploads/2017/04/origen-de-la-sandia-300x206.jpg",
+      "colores": [
+        {
+          "nombre": [
+            {
+              "color": "verde"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nombre": "kiwi1",
+      "precio": 2.5,
+      "calorias": "50",
+      "oferta": false,
+      "descuento": 0,
+      "foto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Kiwi_%28Actinidia_chinensis%29_2_Luc_Viatour.jpg/220px-Kiwi_%28Actinidia_chinensis%29_2_Luc_Viatour.jpg",
+      "colores": {
+        "nombre": [
+          {
+            "color": "verde"
+          }
+        ]
+      },
+      "id": 6
+    },
+    {
+      "nombre": "platano",
+      "precio": "1.80",
+      "calorias": "80",
+      "oferta": false,
+      "descuento": 0,
+      "foto": "https://biotrendies.com/wp-content/uploads/2015/06/frutas-hidratos.jpg",
+      "cantidad": 0,
+      "colores": {
+        "nombre": [
+          {
+            "color": "verde"
+          }
+        ]
+      },
+      "id": 7
+    },
+    {
+      "nombre": "Pera",
+      "precio": 2.5,
+      "calorias": "50",
+      "colores": [
+        "",
+        [
+          {
+            "color": "verde"
+          }
+        ]
+      ],
+      "oferta": true,
+      "foto": "https://comefruta.es/wp-content/uploads/2011/01/perablanquilla41.jpg",
+      "descuento": 10,
+      "cantidad": 0,
+      "id": 8
+    }
+  ]
+}
