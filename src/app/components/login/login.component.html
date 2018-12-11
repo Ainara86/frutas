@@ -1,3 +1,29 @@
-<p>
-  login works!
-</p>
+<h2>Acceso Privado</h2>
+<p class="text-danger">{{mensaje}}</p>
+
+<p>Usuario de prueba</p>
+<ul>
+  <li>Nombre = <b>admin</b></li>
+  <li>Password = <b>12345678</b></li>
+</ul>
+
+<form [formGroup]="formulario" novalidate (ngSubmit)="sumitar()">
+  <div class="form-group ">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" formControlName="nombre">
+    <small *ngIf="formulario.controls.nombre.invalid && formulario.controls.nombre.touched" class="form-text text-danger">Errores
+      de validación.</small>
+    <small *ngIf="formulario.controls.nombre.valid" class="form-text text-success">Todo bien.</small>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label for="password">Password</label>
+      <input type="text" class="form-control" formControlName="password">
+      <small *ngIf="formulario.controls.password.invalid && formulario.controls.password.touched" class="form-text text-danger">Errores
+          de validación.</small>
+        <small *ngIf="formulario.controls.password.valid" class="form-text text-success">Todo bien.</small>
+      
+    </div>
+  </div>
+   <button type="submit" class="btn btn-primary col-md-12" value="entrar" [disabled]="formulario.status==='INVALID'">Iniciar sesion</button>
+</form>

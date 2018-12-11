@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output , EventEmitter } from '@angular/core';
 import { Fruta } from 'src/app/model/fruta';
 
 @Component({
@@ -31,22 +31,40 @@ export class CardComponent implements OnInit {
    return this._fruta2;
  }
 
+ // registrar evento de salida
+ @Output() clikCompra = new EventEmitter();
+
  constructor() {
    console.trace('FrutaCardComponent constructor');
-  
-   this.fruta = new Fruta();
-   this.fruta.nombre = 'Malacaton';
-   this.fruta.calorias = 17.4;
-   this.fruta.precio = 3.45;
-   this.fruta.oferta = true;
-   this.fruta.descuento = 10;
-   this.fruta.foto = 'https://pbs.twimg.com/profile_images/486884835571408897/iZnw1lBq_400x400.png';
- 
-
  }
 
  ngOnInit() {
    console.trace('FrutaCardComponent ngOnInit');
+   
  }
 
+ comprar() {
+   console.trace('FrutaCardComponent comprar');
+  
+   this.clikCompra.emit( { frutaClick : this.fruta } );
+
+ }
+
+ comparador(){
+  let resultado;
+  if (this._fruta.oferta && !this._fruta2.oferta) {
+    const descuento = this._fruta.precio - (this._fruta.precio * this._fruta.descuento) / 100;
+    resultado = descuento - this._fruta2.precio;
+  } else if (this._fruta2.oferta && !this._fruta.oferta) {
+    const descuento = this._fruta2.precio - (this._fruta2.precio * this._fruta2.descuento) / 100;
+    resultado = this._fruta.precio - descuento;
+  } else if (this._fruta.oferta && this._fruta2.oferta) {
+    const descuento1 = this._fruta.precio - (this._fruta.precio * this._fruta.descuento) / 100;
+    const descuento2 = this._fruta2.precio - (this._fruta2.precio * this._fruta2.descuento) / 100;
+    resultado = descuento1 - descuento2;
+  } else {
+    resultado = this._fruta.precio - this._fruta2.precio;
+  }
+  return resultado;
+}
 }

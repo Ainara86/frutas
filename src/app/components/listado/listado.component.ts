@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Fruta } from 'src/app/model/fruta';
 import { FrutaService } from 'src/app/providers/fruta.service';
 import { ActivatedRoute } from '@angular/router';
+import { FormArray } from '@angular/forms';
 
 @Component({
   selector: 'app-listado',
@@ -23,14 +24,6 @@ export class ListadoComponent implements OnInit {
   ngOnInit() {
     console.trace('FormularioComponent ngOnInit');
     this.cargarFrutas(); 
-    this.route.params.subscribe(params => {
-      this.fruta.id= +params['id']; // (+) converts string 'id' to a number
-       this.frutaService.getByID(this.fruta.id).subscribe(data => {
-        console.debug('Datos recibidos %o', data);
-        this.fruta=data;
-      });
-
-   });
   }
   cargarFrutas() {
     this.frutaService.getAll().subscribe(data => {

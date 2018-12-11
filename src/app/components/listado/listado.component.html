@@ -4,15 +4,15 @@
   </div>
   <p class="text-success">{{mensaje}}</p>
   
-  <table id="tabla" class="display" style="width:100%">
+  <table id="tabla" class="display" style="width:100%" border=1px>
     <thead>
         <tr>
             <th>Nombre</th>
             <th>Precio</th>
             <th>Calorías</th>
-            <th>Colores</th>
             <th>Oferta</th>
             <th>Descuento</th>
+            <th>Colores</th>
             <th>Imagen</th>
             <th><span class="fas fa-trash-alt float-right"></span></th>
         </tr>
@@ -22,9 +22,9 @@
             <td><a [routerLink]="['../detalle', f.id]">{{f.nombre}}</a></td>
             <td>{{(f.precio - (f.descuento * f.precio) / 100) | number: '1.2-2'}}</td>
             <td>{{f.calorias}}</td>
-            <td>{{f.colores|json}}</td>
             <td>{{(f.oferta? 'Sí' : 'No')}}</td>
             <td>{{f.descuento}}</td>
+            <td>{{f.colores|json}}</td>
             <td><img src="{{f.foto}}" alt="Imagen_fruta" class="imgFruta"/></td>
             <td><span class="fas fa-trash-alt float-right" (click)="eliminar(f.id)"></span></td>
         </tr>

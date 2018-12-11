@@ -20,6 +20,8 @@ import { LoginService } from './providers/login.service';
 
 //guards
 import { BackofficeGuard } from './guards/backoffice.guard';
+import { DescuentoPipe } from './pipes/descuento.pipe';
+
 
 
 
@@ -32,6 +34,7 @@ import { BackofficeGuard } from './guards/backoffice.guard';
     LoginComponent,
     FomularioComponent,
     ListadoComponent,
+    DescuentoPipe,
   ],
   imports: [
     BrowserModule,

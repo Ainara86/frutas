@@ -7,6 +7,7 @@ import { FomularioComponent } from './components/fomulario/fomulario.component';
 import { ListadoComponent } from './components/listado/listado.component';
 
 const routes: Routes = [
+  { path: '',   redirectTo: '/comparador', pathMatch: 'full' },
   { path: 'comparador', component: ComparadorComponent },
   { path: 'login', component: LoginComponent },
   { path: 'formulario', component: FomularioComponent, canActivate: [BackofficeGuard] },

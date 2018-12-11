@@ -8,24 +8,23 @@ import { Fruta } from '../model/fruta';
 })
 export class FrutaService {
 
-  endpoint: string ='http://localhost:3000/frutas';
+  endpoint: string = 'http://localhost:3000/frutas';
 
-  constructor(public http: HttpClient) { 
+  constructor(public http: HttpClient) {
     console.log('FrutaService constructor');
   }
 
-  getAll():  Observable<any> {
+  getAll(): Observable<any> {
     return this.http.get(this.endpoint);
   }
 
-  getByID(id: number): Observable<any>{
+  getByID(id: number): Observable<any> {
     let uri = this.endpoint + "/" + id;
     return this.http.get(uri);
   }
 
   add(fruta: Fruta): Observable<any> {
     let body = {
-
       "nombre": fruta.nombre,
       "precio": fruta.precio,
       "calorias": fruta.calorias,
@@ -33,11 +32,9 @@ export class FrutaService {
       "descuento": fruta.descuento,
       "foto": fruta.foto,
       "cantidad": fruta.cantidad,
-      "colores":{
-        "nombre": fruta.colores
-      }
+      "colores": fruta.colores,
 
-    }
+    };
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
@@ -52,22 +49,22 @@ export class FrutaService {
     return this.http.delete(uri);
   }
 
-  update(fruta:Fruta): Observable<any>{
+  update(fruta: Fruta): Observable<any> {
     console.trace('FrutaService modificar %o', fruta);
 
     let uri = this.endpoint + '/' + fruta.id;
 
     console.trace('uri');
 
-    let body = 	{
+    let body = {
       "nombre": fruta.nombre,
       "precio": fruta.precio,
       "calorias": fruta.calorias,
-      "colores": fruta.colores,
       "oferta": fruta.oferta,
-      "foto": fruta.foto,
       "descuento": fruta.descuento,
-      "cantidad": fruta.cantidad
+      "foto": fruta.foto,
+      "cantidad": fruta.cantidad,
+      "colores":  fruta.colores
     };
 
     const httpOptions = {

@@ -1,21 +1,59 @@
 <div class="container">
 
   <div class="row">
+    <div class="col">
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="buscar" aria-label="Buscar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
     <div class="col-2 bg-light">
+      <hr>
+      <input (change)="filtrar()" type="checkbox">{{textoFiltro}}
+      <hr>
       <ul class="list-group">
-        <li *ngFor="let f of frutas" (click)="seleccionar(f)" class="list-group-item" [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
+        <li *ngFor="let f of frutas | descuento : todas" (click)="seleccionar(f)" class="list-group-item"
+          [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
       </ul>
     </div>
     <div class="col-8">
       <div class="row">
         <div class="col-5">
-          <app-card [_fruta]="f1" [_fruta2]="f2"></app-card>
+          <app-card [_fruta]="f1" [_fruta2]="f2" (clikCompra)="actualizarCarro($event)"></app-card>
         </div>
         <div class="col-5">
-          <app-card [_fruta]="f2" [_fruta2]="f1"></app-card>
+          <app-card [_fruta]="f2" [_fruta2]="f1" (clikCompra)="actualizarCarro($event)"></app-card>
         </div>
       </div>
-      
+    </div>
+
+    <div class="col-2 carrito">
+      <h6>Compra <i class="fas fa-shopping-cart"></i></h6>
+      <hr>
+      <p>TOTAL <span>{{getTotal() | number:'1.2-2'}} €</span></p>
+      <ul class="list-group">
+        <li *ngFor="let p of carrito, let i = index" class="list-group-item">
+          <span (click)="eliminarProducto(p,i)" class="badge badge-danger float-right">X</span>
+          <p>
+            <img src="{{p.foto}}" alt="imagen de la fruta {{ p.nombre }}">
+            <span class="nombre">{{ p.nombre }}</span><br>
+            <span *ngIf="!p.oferta" class="precio">{{ p.precio | number:'1.2-2' }} €</span>
+            <span *ngIf="p.oferta" class="precio">{{p.precio - (p.precio*p.descuento)/100 | number:'1.2-2'}}</span>
+
+          </p>
+          <p>
+            <button class="btn" (click)="sumarProducto(p,i)">+</button>
+            <span class="cantidad">{{ p.cantidad }}</span>
+            <button class="btn" (click)="restarProducto(p,i)">-</button>
+          </p>
+          <p>
+            total {{ p.precio * p.cantidad | number:'1.2-2' }} €
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
