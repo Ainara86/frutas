@@ -20,3 +20,6 @@ Run `npm install` descargan las librerias en la carpeta node_modules
 ## Development server
 
 Para poner en funcionamiento el proyecto `ng serve -o`. La URL es: `http://localhost:4200/`. 
+
+##Para arrancar el Json
+Para poder ver el contenido del JSON donde se encuentran las frutas se ha de abrir una terminal nueva. Acceder a la carpeta donde está el db.json y ejecutar el siguiente comando: `json-server --watch db.json`
