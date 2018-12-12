@@ -32,7 +32,7 @@ export class FomularioComponent implements OnInit {
       calorias: new FormControl(0,[Validators.required,Validators.min(5),Validators.max(9999)]),
       oferta: new FormControl(false, [ Validators.required]),
       descuento: new FormControl(5,[Validators.required, Validators.min(5),Validators.max(90)]),
-      foto: new FormControl('',[ Validators.required,Validators.pattern(this.urlPatron)]),
+      foto: new FormControl('https://www.masservice.es/wp-content/uploads/2017/03/servicio-fruta-fresca-en-la-oficina.jpg',[ Validators.required,Validators.pattern(this.urlPatron)]),
       colores: new FormArray([this.crearColorFormGroup('')],Validators.minLength(1))
     });
 

@@ -1,37 +1,55 @@
 <div class="row justify-content-between mb-4 mt-2">
-    <h2>Listado de Frutas</h2>
-    <a [routerLink]="['../detalle', -1]" class="btn btn-success">Crear nueva</a>
+  <h2>Listado de Frutas</h2>
+</div>
+<hr>
+<h6>Filtros</h6>
+<div class="row">
+  <div class="col col-2">
+    <p><input (change)="filtrar()" type="checkbox"><span class="badge badge-secondary">{{ofertaFiltro}}</span> </p>
   </div>
-  <div *ngIf="mensaje" class="alert alert-info alert-dismissible fade show" role="alert">
-      <span>{{mensaje}}</span>
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
+  <div class="col col-5">
+    <div class="input-group mb-3">
+      <input type="text" [(ngModel)]="nombre" class="form-control" placeholder="Buscar...">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fas fa-search"></i></span>
+      </div>
     </div>
-  
-  <table id="tabla" class="display" style="width:100%" border=1px>
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Calorías</th>
-            <th>Oferta</th>
-            <th>Descuento</th>
-            <th>Colores</th>
-            <th>Imagen</th>
-            <th><span class="fas fa-trash-alt float-right"></span></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let f of frutas">
-            <td><a [routerLink]="['../detalle', f.id]">{{f.nombre}}</a></td>
-            <td>{{(f.precio - (f.descuento * f.precio) / 100) | number: '1.2-2'}}</td>
-            <td>{{f.calorias}}</td>
-            <td>{{(f.oferta? 'Sí' : 'No')}}</td>
-            <td>{{f.descuento}}</td>
-            <td>{{f.colores|json}}</td>
-            <td><img src="{{f.foto}}" alt="Imagen_fruta" class="imgFruta"/></td>
-            <td><span class="fas fa-trash-alt float-right" (click)="eliminar(f.id)"></span></td>
-        </tr>
-    </tbody>
-  </table>
+  </div>
+  <div class="col col-5">
+        <a [routerLink]="['../detalle', -1]" class="btn btn-success">Crear nueva</a>
+  </div>
+</div>
+<hr>
+<div *ngIf="mensaje" class="alert alert-info alert-dismissible fade show" role="alert">
+  <span>{{mensaje}}</span>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<table id="tabla" class="display" style="width:100%" border=1px>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Calorías</th>
+      <th>Oferta</th>
+      <th>Descuento</th>
+      <th>Colores</th>
+      <th>Imagen</th>
+      <th><span class="fas fa-trash-alt float-right"></span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of frutas| descuento : todas  | buscador:nombre">
+      <td><a [routerLink]="['../detalle', f.id]">{{f.nombre}}</a></td>
+      <td>{{(f.precio - (f.descuento * f.precio) / 100) | number: '1.2-2'}}</td>
+      <td>{{f.calorias}}</td>
+      <td>{{(f.oferta? 'Sí' : 'No')}}</td>
+      <td>{{f.descuento}}</td>
+      <td class="foto">{{f.colores|json}}</td>
+      <td><img src="{{f.foto}}" alt="Imagen_fruta" class="imgFruta" /></td>
+      <td><span class="fas fa-trash-alt float-right" (click)="eliminar(f.id)"></span></td>
+    </tr>
+  </tbody>
+</table>

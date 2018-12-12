@@ -12,14 +12,19 @@ export class ListadoComponent implements OnInit {
   frutas: Fruta[];
   frutaDetalle: Fruta;
   idFruta: number;
-  todas: boolean;
+ 
+  //Filtro de ofertas
+  todas:boolean;
+  ofertaFiltro: string;
   nombreBuscar: string;
-mensaje: string;
+
+  mensaje: string;
 
   constructor(public frutaService: FrutaService, public router: Router) {
     console.trace('ListadoFrutasComponent constructor');
     this.frutas = [];
-    this.todas = false;
+    this.todas=true;
+    this.ofertaFiltro='Todas';
     this.mensaje="";
   }
 
@@ -36,13 +41,9 @@ mensaje: string;
     });
   }
 
-  filtrar(filtro: number) {
-    console.trace('TareaComponent filtrar ' + this.todas);
-    if (filtro === 0) {
-      this.todas = true;
-    } else {
-      this.todas = false;
-    }
+  filtrar(){
+    this.todas= !this.todas;
+    this.ofertaFiltro=(this.todas)?'Todas':'Ofertas';
   }
 
   eliminar(id: number) {

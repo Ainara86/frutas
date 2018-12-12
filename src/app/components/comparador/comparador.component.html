@@ -1,19 +1,26 @@
 <div class="container">
-
-  <div class="col col-3">
-    <div class="input-group mb-3">
-      <input type="text" [(ngModel)]="nombre" class="form-control" placeholder="Buscar...">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><i class="fas fa-search"></i></span>
+<h2>Comparador</h2>
+  
+<hr>
+<h6>Filtros</h6>
+<div class="row">
+    <div class="col col-3">
+        <p><input (change)="filtrar()" type="checkbox"><span class="badge badge-secondary">{{ofertaFiltro}}</span> </p>
       </div>
-    </div>
-  </div>
-  <hr>
+    <div class="col col-3">
+        <div class="input-group mb-3">
+          <input type="text" [(ngModel)]="nombre" class="form-control" placeholder="Buscar...">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+          </div>
+        </div>
+      </div>
+</div>
+<hr>
+
   <div class="row">
     <div class="col-2 bg-light">
-      <hr>
-      <input (change)="filtrar()" type="checkbox">{{ofertaFiltro}}
-      <hr>
+      
       <ul class="list-group">
         <li *ngFor="let f of frutas | descuento : todas  | buscador:nombre" (click)="seleccionar(f)" class="list-group-item"
           [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
@@ -30,7 +37,7 @@
       </div>
     </div>
 
-    <div class="col-2 carrito">
+    <div class="col-2 carrito" [hidden]="getTotal()===0">
       <h6>Compra <i class="fas fa-shopping-cart"></i></h6>
       <hr>
       <p>TOTAL <span>{{getTotal() | number:'1.2-2'}} €</span></p>
