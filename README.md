@@ -9,10 +9,12 @@ Proyecto sencillo en el que se puede ver una lista de frutas y compara su precio
 Realización de dos pipes para filtrar las frutas por:
 - Busqueda de nombre
 - Oferta o no.
+![img](https://github.com/Ainara86/frutas/blob/master/filtros.PNG?raw=true)
 
 Realización de guards:
 - Si se esta logeado se podrán gestionar las frutas y ver el listado.
-
+![img](https://github.com/Ainara86/frutas/blob/master/listado.PNG?raw=true)
+![img](https://github.com/Ainara86/frutas/blob/master/formulario.PNG?raw=true)
 
 
 ## Prerequisitos
