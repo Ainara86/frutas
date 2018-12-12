@@ -2,20 +2,13 @@
   <div class="row">
     <div class="col">
       <h3 class="text-center" *ngIf="id < 0">Frutas</h3>
-      
-      
       <hr>
-      <div class="">
-        <p><b>Valores:</b> {{formulario.value | json}}</p>
-        <p><b>Estado:</b> {{formulario.status | json}} </p>
-      </div>
-  
       <form [formGroup]="formulario" novalidate (ngSubmit)="sumitar(id)">
         <div class="row">
           <div class="col">
             <div class="form-group">
               <label for="nombre" class="col-form-label">Nombre:</label>
-              <input name="nombre" class="form-control" type="text" formControlName="nombre" placeholder="Mínimo 2 letras y máximo 50">
+              <input name="nombre" class="form-control" type="text" formControlName="nombre" placeholder="Entre 2 y 50 caracteres">
               <small class="form-text text-danger" 
               *ngIf="formulario.controls.nombre.invalid && formulario.controls.nombre.touched">
               <i class="fas fa-exclamation"></i>Mínimo 2 letras y máximo 50.
@@ -105,7 +98,7 @@
                   <div [formGroupName] = "i">
                     <div class="row mt-2 mb-2">
                       <div class="col col-10">
-                        <input formControlName="color" type="text" placeholder="Mínimo 2 y máximo 15 caracteres">
+                        <input formControlName="color" type="text" placeholder="Entre 2 y 50 caracteres">
                         <button (click)="eliminarColor(i)"><i class="fas fa-trash-alt"></i></button>
                       </div>
                     </div>

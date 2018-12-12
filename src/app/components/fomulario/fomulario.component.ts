@@ -30,7 +30,6 @@ export class FomularioComponent implements OnInit {
       nombre: new FormControl('',[Validators.required, Validators.minLength(2), Validators.maxLength(50)]),
       precio: new FormControl(0,[ Validators.required,Validators.min(0.1), Validators.max(9999)]),
       calorias: new FormControl(0,[Validators.required,Validators.min(5),Validators.max(9999)]),
-      //cantidad: new FormControl(1,[Validators.required,Validators.min(1),Validators.max(99)]),
       oferta: new FormControl(false, [ Validators.required]),
       descuento: new FormControl(5,[Validators.required, Validators.min(5),Validators.max(90)]),
       foto: new FormControl('',[ Validators.required,Validators.pattern(this.urlPatron)]),
@@ -60,7 +59,6 @@ export class FomularioComponent implements OnInit {
     this.formulario.controls.nombre.setValue(this.fruta.nombre);
     this.formulario.controls.precio.setValue(this.fruta.precio);
     this.formulario.controls.calorias.setValue(this.fruta.calorias);
-    //this.formulario.controls.cantidad.setValue(this.fruta.cantidad);
     this.formulario.controls.descuento.setValue(this.fruta.descuento);
     this.formulario.controls.oferta.setValue(this.fruta.oferta);
     this.formulario.controls.foto.setValue(this.fruta.foto);
@@ -93,7 +91,6 @@ export class FomularioComponent implements OnInit {
     fruta.nombre =  this.formulario.controls.nombre.value;
     fruta.precio = this.formulario.controls.precio.value;
     fruta.calorias = this.formulario.controls.calorias.value;
-   // fruta.cantidad = this.formulario.controls.cantidad.value;
    fruta.cantidad=1;
     fruta.descuento = this.formulario.controls.descuento.value;
     fruta.foto = this.formulario.controls.foto.value;
