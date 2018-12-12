@@ -6,6 +6,15 @@ Proyecto sencillo en el que se puede ver una lista de frutas y compara su precio
 
 ![img](https://github.com/Ainara86/frutas/blob/master/frutas.png?raw=true)
 
+Realización de dos pipes para filtrar las frutas por:
+- Busqueda de nombre
+- Oferta o no.
+
+Realización de guards:
+- Si se esta logeado se podrán gestionar las frutas y ver el listado.
+
+
+
 ## Prerequisitos
 Instalar NODE JS(`https://nodejs.org/`)
 
