@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LoginService } from './providers/login.service';
 import { Router } from '@angular/router';
+import { Usuario } from './model/usuario';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'frutas';
-
+  usuario: Usuario;
   constructor(private loginService: LoginService, private router: Router) {
 
   }
@@ -19,8 +20,17 @@ export class AppComponent {
 
  }
 
+ sesion(): boolean {
+  console.trace('isLogged LoginService');
+  if (!this.loginService.isLogged()) {
+    return false;
+  }
+  return true;
+}
+
  logOut(){
    this.loginService.logout();
    this.router.navigate(['login']);
  }
+ 
 }

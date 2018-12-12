@@ -12,8 +12,14 @@ export class ComparadorComponent implements OnInit {
     carrito: Fruta[];
     f1: Fruta;
     f2: Fruta;
+
+    precioTotal: number;
+    //Filtro de ofertas
     todas:boolean;
-  textoFiltro: string;
+    ofertaFiltro: string;
+
+    //Buscar
+    nombre:string;
   
     /* FrutaService es @Injectable por lo cual debemos declararlo en el constructor, 
        nunca haremos NEW y no usarlo dentro del constructor, mejor en ngOnInit  */
@@ -24,8 +30,9 @@ export class ComparadorComponent implements OnInit {
       this.carrito = [];
       this.f1 = new Fruta();
       this.f2 = new Fruta();
+      this.precioTotal=0;
       this.todas=true;
-      this.textoFiltro='Todas';
+      this.ofertaFiltro='Todas';
     }
   
     ngOnInit() {
@@ -48,14 +55,6 @@ export class ComparadorComponent implements OnInit {
       this.f1 = fruta;
     }
 
-    getTotal(): number {
-      let total = 0;
-      this.carrito.forEach(el => {
-        total += el.precio * el.cantidad;
-      })
-      return total;
-    }
-  
     sumarProducto(p: Fruta, index: number) {
       p.cantidad++;
       this.carrito[index] = p;
@@ -72,6 +71,20 @@ export class ComparadorComponent implements OnInit {
       p.cantidad = 1;
       this.carrito.splice(index, 1);
     }
+
+  
+    getTotal(): number {
+      let total = 0;
+      this.carrito.forEach(el => {
+        if(el.oferta){
+          total += (el.precio - (el.precio*el.descuento)/100)*el.cantidad;
+        }else{
+          total += el.precio * el.cantidad;
+        }
+        
+      })
+      return total;
+    }
   
     actualizarCarro(event: Event) {
       console.debug('ComparadorComponent actualizarCarro recibimos evento del componente hijo');
@@ -86,8 +99,10 @@ export class ComparadorComponent implements OnInit {
         this.carrito.push(frutaClick);
       }
     }
+
+    
     filtrar(){
       this.todas= !this.todas;
-      this.textoFiltro=(this.todas)?'Todas':'Ofertas';
+      this.ofertaFiltro=(this.todas)?'Todas':'Ofertas';
     }
   }

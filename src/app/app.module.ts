@@ -21,6 +21,8 @@ import { LoginService } from './providers/login.service';
 //guards
 import { BackofficeGuard } from './guards/backoffice.guard';
 import { DescuentoPipe } from './pipes/descuento.pipe';
+import { BuscadorPipe } from './pipes/buscador.pipe';
+import { DestacarDirective } from './directives/destacar.directive';
 
 
 
@@ -35,6 +37,8 @@ import { DescuentoPipe } from './pipes/descuento.pipe';
     FomularioComponent,
     ListadoComponent,
     DescuentoPipe,
+    BuscadorPipe,
+    DestacarDirective,
   ],
   imports: [
     BrowserModule,

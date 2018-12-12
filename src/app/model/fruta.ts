@@ -25,7 +25,7 @@ export class Fruta {
         this.oferta=false;
         this.descuento=0;
         this.foto='https://www.google.es/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi5386ts_neAhWxxIUKHbh1B0YQjRx6BAgBEAU&url=http%3A%2F%2Fisanidad.com%2F84459%2Finvestigacion-determina-que-el-consumo-de-frutas-y-verduras-podria-reducir-el-riesgo-de-epoc%2F&psig=AOvVaw1qx8IC9dU4dEEuUJUuLHNY&ust=1543573989611683';
-        this.cantidad=0;
+        this.cantidad=1;
     }
 
     public get id(): number {

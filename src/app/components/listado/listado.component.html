@@ -2,7 +2,12 @@
     <h2>Listado de Frutas</h2>
     <a [routerLink]="['../detalle', -1]" class="btn btn-success">Crear nueva</a>
   </div>
-  <p class="text-success">{{mensaje}}</p>
+  <div *ngIf="mensaje" class="alert alert-info alert-dismissible fade show" role="alert">
+      <span>{{mensaje}}</span>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
   
   <table id="tabla" class="display" style="width:100%" border=1px>
     <thead>
@@ -30,4 +35,3 @@
         </tr>
     </tbody>
   </table>
-

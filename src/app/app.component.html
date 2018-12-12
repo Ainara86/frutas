@@ -4,8 +4,9 @@
   </h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" routerLinkActive="activo" [routerLink]="['comparador']">Comparador</a>
-    <a class="p-2 text-dark" routerLinkActive="activo" [routerLink]="['listado']">Accesso Privado</a>  
-    <a class="p-2 text-dark" routerLinkActive="activo" [routerLink]="['']" (click)=logOut()>Cerrar sesion</a>  
+    <a class="p-2 text-dark" routerLinkActive="activo" [routerLink]="['listado']" *ngIf="!sesion()">Accesso Privado</a> 
+    <a class="p-2 text-dark" routerLinkActive="activo" [routerLink]="['listado']" *ngIf="sesion()">Listado</a>
+    <a class="p-2 text-dark" routerLinkActive="activo" [routerLink]="['']" *ngIf="sesion()" (click)=logOut()>Cerrar sesion</a>  
   </nav>
 
 </div>

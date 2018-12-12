@@ -7,7 +7,7 @@
       "oferta": true,
       "descuento": 20,
       "foto": "http://padeladdict.com/wp-content/uploads/2012/12/platano2.jpg",
-      "cantidad": 0,
+      "cantidad": 1,
       "colores": [
         "amarillo",
         "verde"
@@ -26,7 +26,7 @@
       "oferta": false,
       "descuento": 5,
       "foto": "http://www.cajanature.com/405-large_default/pera-ecologica-.jpg",
-      "cant": 1
+      "cantidad": 1
     },
     {
       "id": 3,
@@ -41,13 +41,13 @@
       "oferta": true,
       "descuento": 15,
       "foto": "http://libbys.es/wordpress/wp-content/uploads/2018/05/fresas.jpg",
-      "cant": 1
+      "cantidad": 1
     },
     {
       "nombre": "Melocoton",
       "precio": 0.75,
       "calorias": 5,
-      "cant": 1,
+      "cantidad": 1,
       "oferta": true,
       "descuento": 10,
       "foto": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/melocoton-de-cieza_1677407.jpg",
@@ -56,20 +56,6 @@
         "Verde"
       ],
       "id": 4
-    },
-    {
-      "nombre": "Manzana",
-      "precio": 2.3,
-      "calorias": 13,
-      "cant": 1,
-      "oferta": false,
-      "descuento": 5,
-      "foto": "http://www.redagricola.com/cl/assets/uploads/2017/08/manazana-792x591-c-default.jpg",
-      "colores": [
-        "Rojo",
-        "Verde"
-      ],
-      "id": 5
     },
     {
       "nombre": "uva",
@@ -83,7 +69,7 @@
       "oferta": true,
       "descuento": 15,
       "foto": "http://www.triamax.com/wp-content/uploads/2015/02/uvas.jpg",
-      "cantidad": 5,
+      "cantidadidad": 5,
       "id": 6
     },
     {
@@ -98,7 +84,7 @@
       "oferta": false,
       "descuento": 0,
       "foto": "https://www.webconsultas.com/sites/default/files/styles/encabezado_articulo/public/migrated/melon.jpg",
-      "cantidad": 5,
+      "cantidadidad": 5,
       "id": 7
     },
     {
@@ -113,7 +99,7 @@
       "oferta": false,
       "descuento": 0,
       "foto": "https://www.comenaranjas.com/images/stories/virtuemart/product/sandia-rayada.jpg",
-      "cantidad": 5,
+      "cantidadidad": 5,
       "id": 8
     },
     {
@@ -128,7 +114,7 @@
       "oferta": true,
       "descuento": 5,
       "foto": "https://www.hogarmania.com/archivos/201307/albaricoque3-xl-668x400x80xX.jpg",
-      "cantidad": 5,
+      "cantidadidad": 5,
       "id": 9
     },
     {
@@ -143,22 +129,23 @@
       "oferta": false,
       "descuento": 0,
       "foto": "https://www.abc.es/media/sociedad/2016/08/05/agua-coco-propiedades2-kfwC--620x349@abc.jpg",
-      "cantidad": 5,
+      "cantidadidad": 5,
       "id": 10
     },
     {
       "nombre": "Granada",
       "precio": 3.8,
       "calorias": 25,
+      "oferta": false,
+      "descuento": 20,
+      "foto": "https://zumodegranada.com/wp-content/uploads/2017/06/granada_web_15.jpg",
+      "cantidadidad": 1,
       "colores": [
+        "",
         "Rojo",
         "Rosa",
         "Verde"
       ],
-      "oferta": true,
-      "descuento": 20,
-      "foto": "https://zumodegranada.com/wp-content/uploads/2017/06/granada_web_15.jpg",
-      "cantidad": 1,
       "id": 11
     },
     {
@@ -172,7 +159,7 @@
       "oferta": false,
       "descuento": 5,
       "foto": "https://static.vix.com/es/sites/default/files/imj/vivirsalud/1/142534212.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 12
     },
     {
@@ -186,7 +173,7 @@
       "oferta": true,
       "descuento": 10,
       "foto": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/cereza-temprana_2930904.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 13
     },
     {
@@ -200,7 +187,7 @@
       "oferta": false,
       "descuento": 5,
       "foto": "https://www.enterbio.es/8232-large_default/frambuesa.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 14
     },
     {
@@ -216,7 +203,7 @@
       "oferta": true,
       "descuento": 35,
       "foto": "https://www.heb.com.mx/media/catalog/product/cache/20/image/d954a60aa48ef57022b0eb878e93bc1f/p/i/pina-miel-gold115389_x1.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 15
     },
     {
@@ -230,7 +217,7 @@
       "oferta": false,
       "descuento": 5,
       "foto": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/naranja-navelina_1241713.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 16
     },
     {
@@ -245,7 +232,7 @@
       "oferta": true,
       "descuento": 15,
       "foto": "https://www.fruteriadevalencia.com/wp-content/uploads/2015/02/MANGO-buena.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 17
     },
     {
@@ -259,7 +246,7 @@
       "oferta": false,
       "descuento": 5,
       "foto": "https://www.enterbio.es/8233-large_default/mora.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 18
     },
     {
@@ -274,7 +261,7 @@
       "oferta": true,
       "descuento": 10,
       "foto": "https://cronicaglobal.elespanol.com/uploads/s1/95/08/34/limon.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 19
     },
     {
@@ -290,8 +277,41 @@
       "oferta": false,
       "descuento": 5,
       "foto": "https://biotrendies.com/wp-content/uploads/2015/06/Higos.jpg",
-      "cantidad": 1,
+      "cantidadidad": 1,
       "id": 20
+    },
+    {
+      "nombre": "Pitapaya",
+      "precio": 6,
+      "calorias": 100,
+      "oferta": true,
+      "descuento": 5,
+      "foto": "https://st.depositphotos.com/1542879/1533/i/950/depositphotos_15334429-stock-photo-pitahaya-04.jpg",
+      "cantidadidad": 1,
+      "colores": [
+        "",
+        "rosa",
+        "Blanco",
+        "Verde"
+      ],
+      "id": 21
+    },
+    {
+      "nombre": "Pomelo",
+      "precio": 5.3,
+      "calorias": 50,
+      "oferta": false,
+      "descuento": 5,
+      "foto": "https://www.comenaranjas.com/images/stories/virtuemart/product/pomelo-star-ruby.jpg",
+      "cantidadidad": 1,
+      "colores": [
+        "",
+        "Verde",
+        "Rojo",
+        "Naranja",
+        "Blanco"
+      ],
+      "id": 22
     }
   ]
 }

@@ -1,21 +1,21 @@
 <div class="container">
 
-  <div class="row">
-    <div class="col">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="buscar" aria-label="Buscar">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+  <div class="col col-3">
+    <div class="input-group mb-3">
+      <input type="text" [(ngModel)]="nombre" class="form-control" placeholder="Buscar...">
+      <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fas fa-search"></i></span>
+      </div>
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col-2 bg-light">
       <hr>
-      <input (change)="filtrar()" type="checkbox">{{textoFiltro}}
+      <input (change)="filtrar()" type="checkbox">{{ofertaFiltro}}
       <hr>
       <ul class="list-group">
-        <li *ngFor="let f of frutas | descuento : todas" (click)="seleccionar(f)" class="list-group-item"
+        <li *ngFor="let f of frutas | descuento : todas  | buscador:nombre" (click)="seleccionar(f)" class="list-group-item"
           [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
       </ul>
     </div>
@@ -48,9 +48,6 @@
             <button class="btn" (click)="sumarProducto(p,i)">+</button>
             <span class="cantidad">{{ p.cantidad }}</span>
             <button class="btn" (click)="restarProducto(p,i)">-</button>
-          </p>
-          <p>
-            total {{ p.precio * p.cantidad | number:'1.2-2' }} €
           </p>
         </li>
       </ul>
