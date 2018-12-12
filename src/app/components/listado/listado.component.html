@@ -37,7 +37,7 @@
       <th> Descuento </th>
       <th> Colores </th>
       <th> Imagen </th>
-      <th><span class="fas fa-trash-alt float-right"></span></th>
+      <th><i class="fas fa-trash-alt"></i></th>
     </tr>
   </thead>
   <tbody>
@@ -49,7 +49,7 @@
       <td>{{f.descuento}}</td>
       <td class="foto">{{f.colores|json}}</td>
       <td><img src="{{f.foto}}" alt="Imagen_fruta" class="imgFruta" /></td>
-      <td><span class="fas fa-trash-alt float-right" (click)="eliminar(f.id)"></span></td>
+      <td><i class="fas fa-trash-alt" (click)="eliminar(f.id)"></i></td>
     </tr>
   </tbody>
 </table>

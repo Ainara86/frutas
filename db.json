@@ -1,20 +1,6 @@
 {
   "frutas": [
     {
-      "nombre": "Banana",
-      "precio": 3.15,
-      "calorias": 500,
-      "oferta": true,
-      "descuento": 20,
-      "foto": "http://padeladdict.com/wp-content/uploads/2012/12/platano2.jpg",
-      "cantidad": 1,
-      "colores": [
-        "amarillo",
-        "verde"
-      ],
-      "id": 1
-    },
-    {
       "id": 2,
       "nombre": "Pera",
       "precio": 2,
@@ -103,36 +89,6 @@
       "id": 8
     },
     {
-      "nombre": "albaricoque",
-      "precio": 3,
-      "calorias": 2,
-      "colores": [
-        "blanco",
-        "verde",
-        "amarillo"
-      ],
-      "oferta": true,
-      "descuento": 5,
-      "foto": "https://www.hogarmania.com/archivos/201307/albaricoque3-xl-668x400x80xX.jpg",
-      "cantidadidad": 5,
-      "id": 9
-    },
-    {
-      "nombre": "coco",
-      "precio": 4,
-      "calorias": 1,
-      "colores": [
-        "blanco",
-        "verde",
-        "amarillo"
-      ],
-      "oferta": false,
-      "descuento": 0,
-      "foto": "https://www.abc.es/media/sociedad/2016/08/05/agua-coco-propiedades2-kfwC--620x349@abc.jpg",
-      "cantidadidad": 5,
-      "id": 10
-    },
-    {
       "nombre": "Granada",
       "precio": 3.8,
       "calorias": 25,
@@ -189,36 +145,6 @@
       "foto": "https://www.enterbio.es/8232-large_default/frambuesa.jpg",
       "cantidadidad": 1,
       "id": 14
-    },
-    {
-      "nombre": "Piña",
-      "precio": 4.3,
-      "calorias": 100,
-      "colores": [
-        "Naranja",
-        "Marron",
-        "Amarillo",
-        "Verde"
-      ],
-      "oferta": true,
-      "descuento": 35,
-      "foto": "https://www.heb.com.mx/media/catalog/product/cache/20/image/d954a60aa48ef57022b0eb878e93bc1f/p/i/pina-miel-gold115389_x1.jpg",
-      "cantidadidad": 1,
-      "id": 15
-    },
-    {
-      "nombre": "Naranja",
-      "precio": 0.9,
-      "calorias": 43,
-      "colores": [
-        "Naranja",
-        "Verde"
-      ],
-      "oferta": false,
-      "descuento": 5,
-      "foto": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/naranja-navelina_1241713.jpg",
-      "cantidadidad": 1,
-      "id": 16
     },
     {
       "nombre": "Mango",
@@ -312,6 +238,65 @@
         "Blanco"
       ],
       "id": 22
+    },
+    {
+      "nombre": "Piña",
+      "precio": 3,
+      "calorias": 100,
+      "oferta": true,
+      "descuento": 5,
+      "foto": "https://www.masservice.es/wp-content/uploads/2017/03/servicio-fruta-fresca-en-la-oficina.jpg",
+      "cantidad": 1,
+      "colores": [
+        "",
+        "amarilla"
+      ],
+      "id": 23
+    },
+    {
+      "nombre": "Melon Amarillo",
+      "precio": 4.99,
+      "calorias": 100,
+      "oferta": true,
+      "descuento": 5,
+      "foto": "https://www.productosdelcampo.store/wp-content/uploads/2017/01/Melon.jpg",
+      "cantidad": 1,
+      "colores": [
+        "",
+        "amarillo",
+        "Verde"
+      ],
+      "id": 24
+    },
+    {
+      "nombre": "Papaya",
+      "precio": 7.99,
+      "calorias": 90,
+      "oferta": false,
+      "descuento": 5,
+      "foto": "https://hortamar.es/wp-content/uploads/papaya-hortamar-1.jpg",
+      "cantidad": 1,
+      "colores": [
+        "",
+        "amarillo",
+        "Verde"
+      ],
+      "id": 25
+    },
+    {
+      "nombre": "Maracuya",
+      "precio": 0.99,
+      "calorias": 90,
+      "oferta": false,
+      "descuento": 5,
+      "foto": "https://frutascharito.es/136-large_default/fruta-de-la-pasion.jpg",
+      "cantidad": 1,
+      "colores": [
+        "",
+        "amarillo",
+        "Morado"
+      ],
+      "id": 26
     }
   ]
 }
